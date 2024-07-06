@@ -1,36 +1,47 @@
 # NYC-Fire-Incidents-Analysis
 **Repository Description:**  Analyzing NYC fire incident data with Python scripts, Docker for containerization, and OpenSearch for visualizations. Explore response times and incident classifications.
 
+---
 
-**Project Background and Approach:**
-The project involves the analysis of a vast dataset containing millions of records related to fire incidents in New York City. The dataset includes various variables such as dispatch response time, incident response time, and incident dates. The approach to this project can be summarized as follows:
+# NYC Fire Incidents Analysis
 
-1) EC2 Provisioning: Setting up Amazon Elastic Compute Cloud (EC2) instances.
+## Overview
+This repository hosts tools and scripts for analyzing a large dataset of fire incidents in New York City. The project aims to uncover insights into response times, incident classifications, and temporal trends across NYC boroughs. It utilizes Python for data manipulation, Docker for containerization, and OpenSearch for efficient data storage and visualization.
 
-2) Containerization: Utilizing container technology to manage and deploy the project.
+## Key Features
+- **Data Exploration**: Dive into detailed analysis of dispatch and incident response times.
+- **Visualization**: Generate interactive charts and graphs using OpenSearch Dashboards.
+- **Scripted Analysis**: Python scripts automate data preprocessing, analysis, and visualization tasks.
+- **Containerized Deployment**: Easily replicate the environment with Docker for consistent results across platforms.
 
-3) Terminal Navigation: Navigating and working with the system through the command-line terminal.
+## Project Structure
+- **data/**: Raw and processed datasets, including CSV files and data dictionaries.
+- **scripts/**: Python scripts for data cleaning, analysis, and visualization.
+- **docker/**: Dockerfile for setting up the development environment.
+- **visualizations/**: Output directory for generated graphs and charts.
 
-4) Python Scripting: Developing and using Python scripts for data manipulation and analysis.
+## Technologies Used
+- **Python**: Pandas, Matplotlib, and Seaborn for data analysis and visualization.
+- **Docker**: Simplifies environment setup and ensures reproducibility.
+- **OpenSearch**: Stores and queries data, providing insights through visual dashboards.
 
-5) OpenSearch and Visualizations: Employing OpenSearch for data storage and visualization.
+## Setup Instructions
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yourusername/NYC-Fire-Incidents-Analysis.git
+   cd NYC-Fire-Incidents-Analysis
+   ```
+2. **Build and Run Docker Container**:
+   ```bash
+   docker build -t nyc-fire-analysis .
+   docker run -p 8080:8080 nyc-fire-analysis
+   ```
+3. **Explore Data and Scripts**:
+   - Use scripts in `scripts/` to preprocess data, generate visualizations, and analyze trends.
+   - Customize scripts and parameters for specific analysis needs.
 
-**Project Process:**
+## Visualizations
+- **Response Time Analysis**: Visualize average response times by borough and incident type.
+- **Temporal Trends**: Analyze monthly and yearly trends in fire incidents.
+- **Incident Classification**: Explore the distribution of incident types across NYC neighborhoods.
 
-- The first step was to create an Elasticsearch (ES) domain. The project utilized a master username and password for accessing the ES domain's endpoint and the OpenSearch dashboard URL.
-
-- An EC2 instance was established and accessed via a web browser. This instance played a crucial role in setting up the required folder structure and project files.
-
-- Preliminary tests were conducted to ensure that data retrieval was functioning correctly. Initially, a small number of rows were retrieved using the page_size parameter for testing purposes.
-
-In summary, this project aimed to analyze a substantial dataset of NYC fire incidents using various technologies and tools, including EC2, containerization, Python scripting, and OpenSearch for effective data storage and visualization.
-
-**DOCKER RUN COMMAND:**
-
-docker run -e INDEX_NAME="fire" -e DATASET_ID="8m42-w767" -e APP_TOKEN="HE1n5LIqNun5UJUdHk0cwXw6F" -e ES_HOST="https://search-nyc-fire-data-f4543eu5y6wx7xz7pfbegnu2dy.us-east-2.es.amazonaws.com" -e ES_USERNAME="anmolmaheshwari" -e ES_PASSWORD="Consistent10." bigdataproject1:1.0 --page_size=2000 --num_pages=3200
-
-
-OpenSearch Dashboards URL:
-https://search-nyc-fire-data-f4543eu5y6wx7xz7pfbegnu2dy.us-east-2.es.amazonaws.com/_dashboards 
-Domain endpoint:
-https://search-nyc-fire-data-f4543eu5y6wx7xz7pfbegnu2dy.us-east-2.es.amazonaws.com 
