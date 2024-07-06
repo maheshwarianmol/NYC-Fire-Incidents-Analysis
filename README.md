@@ -1,10 +1,6 @@
 # NYC-Fire-Incidents-Analysis
 **Repository Description:**  Analyzing NYC fire incident data with Python scripts, Docker for containerization, and OpenSearch for visualizations. Explore response times and incident classifications.
 
----
-
-# NYC Fire Incidents Analysis
-
 ## Overview
 This repository hosts tools and scripts for analyzing a large dataset of fire incidents in New York City. The project aims to uncover insights into response times, incident classifications, and temporal trends across NYC boroughs. It utilizes Python for data manipulation, Docker for containerization, and OpenSearch for efficient data storage and visualization.
 
